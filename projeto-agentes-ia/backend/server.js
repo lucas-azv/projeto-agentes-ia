@@ -1,3 +1,8 @@
+import cors from 'cors';
+import 'dotenv/config';
+import express from 'express';
+import fetch from 'node-fetch';
+
 const app = express();
 const port = 5000;
 
@@ -46,8 +51,3 @@ app.post('/api/generate', async (req, res) => {
 app.listen(port, () => {
   console.log(`Servidor backend rodando na porta ${port}`);
 });
-const cors = require('cors');
-const express = require('express');
-const fetch = require('node-fetch');
-const dotenv = require('dotenv');
-dotenv.config(); // Carrega as variáveis de ambiente do arquivo .env
