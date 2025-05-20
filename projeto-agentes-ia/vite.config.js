@@ -5,10 +5,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
-  },
-  build: {
-    rollupOptions: {
-      input: './src/main.jsx', // Tente este caminho relativo
+    proxy: {
+      '/chat': 'http://localhost:5000',
     },
   },
 });
