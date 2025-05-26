@@ -162,3 +162,8 @@ app.post('/chat', async (req, res) => {
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
+
+if (!API_KEY) {
+    console.error("Erro: API_KEY não definida. Use um arquivo .env local ou configure no Heroku.");
+    process.exit(1);
+}
